@@ -30,6 +30,7 @@ export async function toCanvas<T extends HTMLElement>(
   options: Options = {},
 ): Promise<HTMLCanvasElement> {
   const { width, height } = getImageSize(node, options)
+  console.log(width, height);
   const svg = await toSvg(node, options)
   const img = await createImage(svg)
 
